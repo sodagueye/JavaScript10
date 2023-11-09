@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1. Demander a l'utilisateur de remplire deux tableaux (tab1 et tab2) dont la taille est 5
+            tab3 a partir des elements du tab1 qui ne se trouvent pas dans tab2
+            Creer tab4 a partir des elements du tab1 qui se trouvent dans tab2 -->
+    <script>
+        // manipulation tableau*
+       
+          let tab1=[];
+          let tab2=[];
+        for(i=0 ;i < 5 ;i++){
+       let nombre1 = parseInt(prompt("saisir un nombre de tab1"));
+            tab1.push(nombre1)
+    }
+       console.table(tab1)
+        for(x =0 ;x < 5 ; x++){
+           let nombre2 =parseInt( prompt("saisir un nombre de tab2"));
+           tab2.push(nombre2)
+        }
+        console.log(tab2)
+         let tab3 = tab1.filter(el1 =>  !tab2.includes(el1));
+             console.log('tab3', tab3);
+             let tab4 =tab1.filter(num1 => tab2.includes(num1))
+             console.log('tab4', tab4);
+       
+    </script>
+    
+</body>
+</html>
