@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 2. Soit un tableau tab1=[5,3,87,1,-4,-99,0]
+Sans utiliser les methodes javascript :
+1. Ecrire une fonction qui  reçoit en parametre tab1 et qui permet de le trier  
+2. Ecrire une fonction qui reçoit en parametre tab1 et retourne la valeur max , min -->
+<script>
+    //Ecrire une fonction qui  reçoit en parametre tab1 et qui permet de le trier
+    console.log("Trie en ordre croissant")
+    var tab1 = [5,3,87,1,-4,-99,0]
+    function triTab1(tab1) {
+     var n = tab1.length;
+     for (var i = 0; i < n - 1; i++) {
+        for (var j = 0; j < n - 1 - i; j++) {
+            // Comparaison et échange des éléments
+            if (tab1[j] > tab1[j + 1]) {
+                var pmt = tab1[j];
+                tab1[j] = tab1[j + 1];
+                tab1[j + 1] = pmt;
+            }
+        }
+    }
+    return tab1;
+    }
+      triTab1(tab1);
+      console.log(tab1)
+    //   Ecrire une fonction qui reçoit en parametre tab1 et retourne la valeur max , min -->
+    console.log("maximun et minimun")
+    var tab1 = [5,3,87,1,-4,-99,0]
+    var max = tab1[0];
+    var min = tab1[0];
+    function maxMin(){
+       for(var x = 0 ; x < tab1.length ; x++){
+            if( max < tab1[x]){
+              max = tab1[x];
+             }
+             else if(min > tab1[x]){
+                 min = tab1[x];
+             }
+        }
+    }
+    maxMin()
+    console.log("Le maximun est:" +max);
+    console.log("Le manimun est:" +min);
+
+
+
+
+
+
+
+</script>
+    
+</body>
+</html>
